@@ -3,7 +3,7 @@ import tweetimage from './images/tweet.jpg'
 const Topbar = () => {
     return (
       <>
-        <div className="flex justify-between items-center px-6 py-3 shadow-md bg-white">
+        <div className="flex justify-between items-center px-6 py-3 shadow-md bg-white w">
           {/* Left side */}
           <div className="flex items-center gap-4">
             <div className="font-bold">𓃑</div>
