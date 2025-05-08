@@ -1,0 +1,56 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Main container holding sidebar and content */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 60px; /* Space for topbar */
+  }
+  
+  /* Topbar styling */
+  .topbar {
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure topbar is always on top */
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    height: calc(100vh - 60px); /* Subtract topbar height */
+    position: fixed;
+    top: 60px; /* Adjusted to be below the topbar */
+    left: 0;
+    background-color: #222;
+    color: white;
+    padding-top: 20px;
+    z-index: 500; /* Ensure sidebar is behind topbar */
+  }
+  
+  /* Main content styling */
+  .maincontent {
+    margin-left: 250px; /* Offset for the sidebar */
+    margin-top: 60px; /* Offset for the topbar */
+    padding: 20px;
+    background-color: #f4f4f4;
+    flex-grow: 1; /* Allow content to fill remaining space */
+    overflow-y: auto;
+  }
+  
