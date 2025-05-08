@@ -1,36 +1,56 @@
-import tweetimage from './images/tweet.jpg'
+import tweetimage from "./images/tweet.jpg";
+import { IoMoonOutline } from "react-icons/io5";
+import { RiNotification3Line } from "react-icons/ri";
+import { LuSettings, LuRectangleHorizontal, LuCircleDashed } from "react-icons/lu";
+import { CiMail } from "react-icons/ci";
+import { PiLineVertical } from "react-icons/pi";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { TbGridDots } from "react-icons/tb";
+import { IoIosArrowDropdown } from "react-icons/io";
 
 const Topbar = () => {
-    return (
-      <>
-        <div className="flex justify-between items-center px-6 py-3 shadow-md bg-white">
-          {/* Left side */}
-          <div className="flex items-center gap-4">
-            <div className="font-bold">𓃑</div>
-            <div className="text-lg font-semibold">Test Project</div>
+  return (
+    <div className="w-full h-[72px] flex justify-between px-[30px] bg-[#FFFFFF] items-center">
+      {/* Left side */}
+      <div className="flex gap-[16px] items-center">
+        <div className="w-[24px] h-[24px] flex items-center justify-center">
+          <TbGridDots />
+        </div>
+        <div className="flex items-center gap-[8px]">
+          <div className="font-inter font-semibold text-[20px] leading-[140%]">
+            Test Project
           </div>
-  
-          {/* Right side */}
-          <div className="flex items-center gap-5">
-            <div className="text-xl cursor-pointer">+</div>
-            <div className="relative cursor-pointer">
-              <span className="text-xl">🔔</span>
-              <span className="absolute -top-1 -right-1 bg-green-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">2</span>
-            </div>
-            <div className="text-xl cursor-pointer">📧</div>
-            <div className="text-xl cursor-pointer">⚙️</div>
-            <div className="border-l h-6 border-gray-300 mx-2"></div>
-            <div className="text-xl cursor-pointer">🌙</div>
-            <img
-  src={tweetimage}
-  alt="profile"
-  className="w-8 h-8 rounded-full object-cover"
-/>
+          <div className="flex items-center gap-1">
+            <IoIosArrowDropdown />
           </div>
         </div>
-      </>
-    )
-  }
-  
-  export default Topbar;
-  
+        <div className="flex items-center border-b w-[343px] h-9 gap-2 px-2">
+          <input
+            type="text"
+            className="flex-1 outline-none text-sm"
+            placeholder="Search..."
+          />
+          <LuRectangleHorizontal />
+        </div>
+      </div>
+
+      {/* Right side */}
+      <div className="flex gap-6 items-center">
+        <LuCircleDashed className="w-6 h-6" />
+        <RiNotification3Line className="w-6 h-6" />
+        <CiMail className="w-5 h-5 border border-[#667085] rounded-sm" />
+        <LuSettings className="w-6 h-6 border border-[#667085] rounded-sm" />
+        <PiLineVertical className="h-[28px] border-l border-[#344054]" />
+        <IoMoonOutline className="w-5 h-5 border border-[#667085] rounded-full" />
+        <img
+          src={tweetimage}
+          alt="profile"
+          className="w-[40.5px] h-[40.5px] rounded-full"
+        />
+        <MdKeyboardArrowDown className="w-6 h-6" />
+      </div>
+    </div>
+  );
+};
+
+export default Topbar;

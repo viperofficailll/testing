@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import tweetimage from '../images/tweet.jpg'; // Use a default image for testing
+import type {  KeyboardEvent } from 'react';
+
+import tweetimage from '../images/tweet.jpg'; // Default image for testing
 
 const Datatable: React.FC = () => {
   const [columns, setColumns] = useState<string[]>([
@@ -49,10 +51,39 @@ const Datatable: React.FC = () => {
     }
   };
 
-  const handleCellKeyDown = (e: React.KeyboardEvent) => {
+  const moveToNextCell = (row: number, col: number, shiftKey: boolean = false) => {
+    const visibleColumns = columns.filter((_, idx) => !hiddenColumns.includes(idx));
+    const totalCols = visibleColumns.length + 1; // +1 for 'Name' column
+    let nextCol = col + (shiftKey ? -1 : 1);
+    let nextRow = row;
+
+    if (nextCol >= totalCols + 1) { // +1 to adjust col index offset
+      nextCol = 1;
+      nextRow++;
+    }
+    if (nextCol < 1) {
+      nextCol = totalCols;
+      nextRow--;
+    }
+
+    if (nextRow >= data.length) nextRow = 0;
+    if (nextRow < 0) nextRow = data.length - 1;
+
+    const flatCols = [1, ...visibleColumns.map((_, i) => i + 2)]; // column indices to match data
+    const targetCol = flatCols[nextCol - 1]; // map visible col index to data index
+
+    startEditingCell(nextRow, targetCol, data[nextRow][targetCol]);
+  };
+
+  const handleCellKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (!editingCell) return;
+
     if (e.key === 'Enter') {
       saveCellEdit();
+    } else if (e.key === 'Tab') {
+      e.preventDefault();
+      saveCellEdit();
+      moveToNextCell(editingCell.row, editingCell.col, e.shiftKey);
     }
   };
 
@@ -97,7 +128,6 @@ const Datatable: React.FC = () => {
         <select className="px-3 py-2 rounded border border-gray-300 text-sm bg-white"><option>Sort</option></select>
         <button className="text-blue-600 text-sm hover:underline">Clear</button>
 
-        {/* Add Column */}
         {hiddenColumns.length > 0 ? (
           <select
             onChange={(e) => {
@@ -176,7 +206,6 @@ const Datatable: React.FC = () => {
           <tbody>
             {data.map((row, rowIndex) => (
               <tr key={rowIndex} className="bg-white">
-                {/* Editable Name */}
                 <td className="p-3 border-b text-sm min-w-[200px] whitespace-nowrap">
                   <div className="flex items-center gap-2">
                     <img src={row[0]} alt="avatar" className="w-8 h-8 rounded-full object-cover" />
@@ -199,7 +228,6 @@ const Datatable: React.FC = () => {
                     )}
                   </div>
                 </td>
-
                 {columns.map((_, colIndex) => {
                   const dataIndex = colIndex + 2;
                   if (hiddenColumns.includes(colIndex)) return null;
