@@ -6,11 +6,12 @@ import Topbar from "./components/Topbar";
 // Optionally, define types for props if needed
 const App: React.FC = () => {
   return (
-    <div className="app-container">
+    
+    <div className="app-container bg-[#EDEDF3]">
       <Topbar />
       <div className="display-flex">
-      <Sidebar />
-      <Maincontent />
+      
+      <Sidebar > <Maincontent /></Sidebar>
       </div>
      
     </div>
