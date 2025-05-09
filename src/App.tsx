@@ -7,7 +7,7 @@ import Topbar from "./components/Topbar";
 const App: React.FC = () => {
   return (
     
-    <div className="app-container bg-[#EDEDF3]">
+    <div className="app-container bg-[#1dbc52] left-[2610px] top-[1244px] w-[1440px] h-[1080px] ">
       <Topbar />
       <div className="display-flex">
       

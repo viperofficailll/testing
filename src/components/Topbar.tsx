@@ -1,56 +1,68 @@
-import tweetimage from "./images/tweet.jpg";
-import { IoMoonOutline } from "react-icons/io5";
-import { RiNotification3Line } from "react-icons/ri";
-import { LuSettings, LuRectangleHorizontal, LuCircleDashed } from "react-icons/lu";
-import { CiMail } from "react-icons/ci";
-import { PiLineVertical } from "react-icons/pi";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { TbGridDots } from "react-icons/tb";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { PiBellSimpleLight } from "react-icons/pi";
+import { RiNumber2 } from "react-icons/ri";
+import { CiMail } from "react-icons/ci";
+import { SlSettings } from "react-icons/sl";
+import { IoMoonOutline } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
+import tweetimage from './images/tweet.jpg'
 
-const Topbar = () => {
-  return (
-    <div className="w-full h-[72px] flex justify-between px-[30px] bg-[#FFFFFF] items-center">
-      {/* Left side */}
-      <div className="flex gap-[16px] items-center">
-        <div className="w-[24px] h-[24px] flex items-center justify-center">
-          <TbGridDots />
-        </div>
-        <div className="flex items-center gap-[8px]">
-          <div className="font-inter font-semibold text-[20px] leading-[140%]">
-            Test Project
+const Topbar= () => {
+    return (
+
+        <div className="relative flex bg-[#ffffff] w-[1440px] h-[72px] items-center px-[30px]">
+        {/* Left div */}
+        <div className="flex absolute left-[30px] top-[18px] w-[635.75px] h-auto min-h-[36px] gap-[16px] p-[6px]">
+          {/* Dot grid */}
+          <div className="w-[24px] h-[24px] flex items-center justify-center">
+            <TbGridDots />
           </div>
-          <div className="flex items-center gap-1">
-            <IoIosArrowDropdown />
+          {/* Project name and search bar */}
+          <div className="flex items-center w-auto min-w-[527px] h-[24px] gap-[36px]">
+            <div className="w-auto min-w-[527px] h-auto min-h-[36px] flex items-center gap-[8px] left-[40px]">
+                <div className="gap-[36px] flex items-center w-auto min-w-[148px] h-auto min-h-[28px]">
+            <h1 className="font-inter font-semibold text-[20px] leading-[28px] text-[#101828]">
+              Test Project
+            </h1>
+            <div className="w-[343px] h-[36px] px-[8px] py-[6px]">
+              <input
+                className="bg-transparent border-none outline-none w-full h-full font-inter font-semibold text-[20px] leading-[28px] text-[#101828] placeholder-[#ffffff]"
+                placeholder="Search by keywords"
+                type="text"
+              />
+            </div>
+            </div>
+            </div>
           </div>
         </div>
-        <div className="flex items-center border-b w-[343px] h-9 gap-2 px-2">
-          <input
-            type="text"
-            className="flex-1 outline-none text-sm"
-            placeholder="Search..."
-          />
-          <LuRectangleHorizontal />
+  
+        {/* Right div */}
+        <div className=" flex absolute right-[30px] top-[15.75px] w-auto min-w-[332.5px] h-auto min-h-[40.5px] rounded">
+            <div className="absolute w-[24px] h-[24px] flex items-center justify-center rounded-[360] left-0 top-[8.25px]">
+                <IoIosAddCircleOutline className="w-full h-full" />
+            </div>
+            <div className="absolute w-[24px] h-[24px] items-center gap-10 rounded-[360] left-[48px] top-[8.25px] "><PiBellSimpleLight className="w-full h-full"/></div>
+            <div className="bg-green-400 absolute w-[14px] h-[14px] items-center gap-10 left-[59.5px] top-[3.25px] rounded-[50%] "><RiNumber2 className="w-full h-full"/></div>
+            <div className="absolute w-[24px] h-[24px] left-[96px] top-[8.25px]"><CiMail className="w-full h-full"/></div>
+            <div className="absolute left-[144px] top-[8.25px] w-[24px] h-[24px] "><SlSettings className="w-full h-full"/></div>
+            <div className=" absolute left-[192px] w-auto h-auto min-w-[140.5px] min-h-[40.5px] gap-[4px] ">
+                <div className="absolute w-auto h-auto min-w-[112.5px] min-h-[40.5px] gap-[24px]">
+                    <div className="bg-black absolute top-[6.25px] w-0.5 h-[28px] "></div>
+                    <div className=" absolute left-[24px] top-[8.25px] w-[24px] h-[24px] ">
+                    <IoMoonOutline className="w-full h-full"/>
+                    </div>
+                    <img src={tweetimage} className="absolute left-[72px] w-[40.5px] h-[40.5px] rounded-[50%] " alt="profile-pic" />
+
+                </div>
+                <div className="absolute w-[24px] h-[24px] left-[116.5px] top-[8.25px] ">
+                <IoIosArrowDown className="w-full h-full"/>
+                </div>
+
+            </div>
         </div>
       </div>
-
-      {/* Right side */}
-      <div className="flex gap-6 items-center">
-        <LuCircleDashed className="w-6 h-6" />
-        <RiNotification3Line className="w-6 h-6" />
-        <CiMail className="w-5 h-5 border border-[#667085] rounded-sm" />
-        <LuSettings className="w-6 h-6 border border-[#667085] rounded-sm" />
-        <PiLineVertical className="h-[28px] border-l border-[#344054]" />
-        <IoMoonOutline className="w-5 h-5 border border-[#667085] rounded-full" />
-        <img
-          src={tweetimage}
-          alt="profile"
-          className="w-[40.5px] h-[40.5px] rounded-full"
-        />
-        <MdKeyboardArrowDown className="w-6 h-6" />
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Topbar;
