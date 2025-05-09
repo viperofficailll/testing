@@ -1,53 +1,59 @@
 import { FaUser } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa6";
+import { BsThreeDots } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
 
 const BranchBar = () => {
-
   return (
-    
-    <div className="w-[1192px] h-[60px] flex justify-between rounded-[2px] px-[24px] bg-[#FFFFFF] shadow-[0px_5px_15px_0px_#0000000A]">
-      {/* Left section */}
-      <div className="flex w-[90px] h-[24px] gap-[12px] items-center">
-        <div className="w-[24px] h-[24px] flex items-center justify-center">
-          <FaUser />
-        </div>
-        <div className="w-[54px] h-[22px] bg-[#344054] font-medium text-[16px] leading-[140%] font-['Inter'] text-white flex items-center justify-center rounded-[4px]">
-          Clients
+    <>
+      <div
+        id="418"
+        className="bg-[#FFFFFF] h-[60px] w-[1192px] flex rounded-[2px] justify-between px-[24px]  shadow-[0px_5px_15px_0px_#0000000A] items-center relative"
+      >
+        <div
+          id="frame4182"
+          className=" min-w-[90px] w-auto min-h-[24px] h-auto gap-[12px] flex justify-start"
+        >
+          <div id="icon" className=" w-[24px] h-[24px] ">
+            <FaUser className="w-full h-full"></FaUser>
+          </div>
+          <h2
+            className="min-w-[54px] w-auto  min-h-[22px] h-auto  font-medium text-base leading-[1.4] tracking-normal text-[#344054
+] "
+          >
+            Clients{" "}
+          </h2>
+
+          <div
+            id="34078"
+            className=" w-[618px]   h-auto min-h-[32px] justify-end absolute left-[550px] top-[14px] gap-[24px]"
+          >
+            <div
+              id="frame-423"
+              className=" absolute left-[412px] top-0 min-w-[158px] w-auto min-h-[32px] h-auto items-center gap-[8px] px-[8px] py-[6px] rounded-[4px]"
+            >
+              <div
+                id="frame422 "
+                className="absolute  left-[8px] top-[7.5px] justify-start gap-[6px] text-[12px]"
+              >
+                Branch(kathmandu)
+              </div>
+              <div
+                id="haere"
+                className="absolute left-[130px] top-[6px] w-[20px] h-[20px]"
+              >
+                <FaChevronDown className="w-full h-full"></FaChevronDown>
+              </div>
+            </div>
+            <div
+              id="frame417"
+              className=" absolute left-[594px] top-[4px]  min-w-[24px]  w-auto min-h-[24px] h-auto justify-start gap-[28px]"
+            >
+              <BsThreeDots className="w-full h-full"></BsThreeDots>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Right section */}
-      <div className="flex w-[618px] h-[32px] gap-[24px] items-center">
-        {/* Branch selector */}
-        <div className="flex w-[158px] h-[32px] gap-[8px] rounded-[4px] px-[8px] py-[6px] border border-[#D0D5DD] items-center justify-between">
-          <div className="flex w-[114px] h-[17px] gap-[6px] items-center">
-            <div className="w-[114px] h-[17px] bg-[#667085] font-normal text-[12px] leading-[140%] font-['Inter'] text-white flex items-center">
-              Branch(Kathmandu)
-            </div>
-          </div>
-          <div className="relative w-[20px] h-[20px] flex items-center justify-center">
-            <div className="absolute w-[10px] h-[5px] top-[7.5px] left-[5px] border-[1.5px] border-[#667085] flex items-center justify-center">
-              <FaChevronDown />
-            </div>
-          </div>
-        </div>
-
-        {/* Add button */}
-        <div className="flex w-[117px] h-[40px] gap-[6px] rounded-[4px] px-[12px] py-[8px] items-center bg-gray-100 cursor-pointer">
-          <div className="relative w-[20px] h-[20px] flex items-center justify-center">
-            <div className="absolute w-[11.67px] h-[11.67px] top-[4.17px] left-[4.17px] border-[1.25px] border-[#FFFFFF] flex items-center justify-center">
-              <FaPlus />
-            </div>
-          </div>
-          <span>Add</span>
-        </div>
-      </div>
-    </div>
-
-
-
-
+    </>
   );
 };
 
