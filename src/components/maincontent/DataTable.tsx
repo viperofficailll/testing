@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { HiDotsVertical } from "react-icons/hi";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { PiCaretUpDownLight } from "react-icons/pi";
 import type { KeyboardEvent } from "react";
 
 import tweetimage from "../images/tweet.jpg"; // Default image for testing
@@ -17,6 +20,84 @@ const Datatable: React.FC = () => {
   ]);
 
   const [data, setData] = useState<string[][]>([
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
+    [
+      tweetimage,
+      "Nisha Giri Puri",
+      "System",
+      "ID296",
+      "+9779867****",
+      "Deactivated",
+      "Justin",
+      "Allison",
+      "Completed",
+      "8",
+      "24-09-2023",
+    ],
     [
       tweetimage,
       "Nisha Giri Puri",
@@ -134,51 +215,181 @@ const Datatable: React.FC = () => {
   return (
     <>
       <div
-        id="frame455"
-        className="position relative left-[24px]  w-[1168px] min-h-[124px] h-auto items-center py-[12px] bg-yellow-300 flex"
+        id="frame505 "
+        className="w-[1192px] h-[636px] justify-start px-[24px] pb-[12px]"
       >
         <div
-          id="frame450"
-          className="bg-[#7474C9] absolute top-[46px] min-w-[113px] w-auto min-h-[32px] h-auto justify-start gap-[6px] px-[12px] py-[6px] rounded-[4px] flex"
+          id="frame455"
+          className="position relative left-[24px]  w-[1168px] min-h-[124px] h-auto items-center py-[12px] bg-white flex"
         >
-          <button
-            onClick={handleAddRow}
-            className="absolute left-[12px] top-[7.5px] min-w-[63px] min-h-[17px] h-auto text-[12px]"
-          >
-            {" "}
-            New Client
-          </button>
           <div
-            id="cheverondown"
-            className="absolute left-[81px] top-[6px]  bg-white w-[20px] h-[20px]"
+            id="frame450"
+            className="bg-[#7474C9] absolute top-[46px] min-w-[113px] w-auto min-h-[32px] h-auto justify-start gap-[6px] px-[12px] py-[6px] rounded-[4px] flex"
+          >
+            <button
+              onClick={handleAddRow}
+              className="absolute left-[12px] top-[7.5px] min-w-[63px] min-h-[17px] h-auto text-[12px]"
+            >
+              {" "}
+              New Client
+            </button>
+            <div
+              id="cheverondown"
+              className="absolute left-[81px] top-[6px]  bg-white w-[20px] h-[20px]"
+            ></div>
+          </div>
+          <div
+            id="34079"
+            className="  absolute left-[451px] top-[12px] w-[100px] h-[100px]"
           ></div>
-        </div>
-        <div
-          id="34079"
-          className="bg-pink-400  absolute left-[451px] top-[12px] w-[100px] h-[100px]"
-        ></div>
-        <div
-          id="frame454"
-          className="absolute left-[889px] top-[49.5px] items-center gap-[6px] w-[279px] h-[25px] bg-blue-500 flex justify-between
+          <div
+            id="frame454"
+            className="absolute left-[889px] top-[49.5px] items-center gap-[6px] w-[279px] h-[25px]  flex justify-between
     "
+          >
+            <div
+              id="451"
+              className="absolute  left-[0px] top-[0px] w-[103px] h-[25px] text-[12px] gap-[10px] py-[4px] px-[12px]"
+            >
+              prospects(18)
+            </div>
+            <div
+              id="452"
+              className="absolute left-[103px]  top-[0px] w-[85px] h-[25px] gap-[10px] px[12px] py-[4px] items-center  text-[12px]"
+            >
+              {" "}
+              clients(10)
+            </div>
+            <div
+              id="453"
+              className="absolute left-[188px]  top-[0px] w-[85px] h-[25px] gap-[10px] px[12px] py-[4px] items-center  text-[12px]"
+            >
+              {" "}
+              Archived(0)
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="frame487"
+          className="bg-red-500 relative left-[0px] top-[0px] justify-start w-[1970px] h-[500px] overflow-hidden flex"
         >
           <div
-            id="451"
-            className="absolute  left-[0px] top-[0px] w-[103px] h-[25px] text-[12px] gap-[10px] py-[4px] px-[12px]"
+            id="frame472"
+            className=" absolute left-[0px] top-[0px] w-[36px] h-[500px] justify-start"
           >
-            prospects(18)
+            <div
+              id="frame495"
+              className=" bg-red-500 items-center w-[36px] h-[550px] gap-[10px] px-[8px] py-[4px] absolute"
+            >
+              <div
+                id="checkbox"
+                className="left-[8px] top-[265px] w-[20px] h-[20px] bg-black items-center"
+              ></div>
+            </div>
           </div>
           <div
-            id="452"
-            className="absolute left-[103px]  top-[0px] w-[85px] h-[25px] gap-[10px] px[12px] py-[4px] items-center  text-[12px]"
+            id="frame473"
+            className="bg-white  relative left-[36px] justify-start w-[203px] h-[500px]"
           >
-            {" "}
-            clients(10)
+            <div
+              id="457"
+              className="bg-blue-500 w-[203px] h-[50px] gap-auto px-[16px] py-[8px] items-center "
+            >
+              <div
+                id="frame456"
+                className="  absolute left-[16px] top-[16.5px] bg-green-400 w-[50px] h-[17px] justify-start gap-[2px]"
+              >
+                Name
+              </div>
+              <div
+                id="dotsvertical"
+                className=" absolute  left-[174px] top-[18.5px] w-[13px] h-[13px] "
+              >
+                <HiDotsVertical className="w-full h-full"></HiDotsVertical>
+              </div>
+            </div>
+            <div
+              id="frame471"
+              className=" absolute top-[50px] w-[203px] h-[50px] justify-start gap-[8px] px-[16px] py-[8px] bg-yellow-600 flex"
+            >
+              <div
+                id="frame470"
+                className="absolute top-[8px] left-[16px] w-[149px] h-[34px] justify-start gap-[4px] bg-pink-600"
+              >
+                <div
+                  id="img"
+                  className=" absolute top-[3px] w-[28px] h-[28px] rounded-[4px]  bg-black"
+                ></div>
+                <div
+                  id="frame469 "
+                  className="relative left-[32px] w-[117px] h-[34px] justify-start flex"
+                >
+                  <div
+                    id="name"
+                    className="w-[81px] h-[17px] text-[12px] absolute"
+                  >
+                    {" "}
+                    Nisha Giri Puri
+                  </div>
+                  <div
+                    id="email"
+                    className=" w-[117px] h-[17px] absolute top-[17px] text-[12px]"
+                  >
+                    example@gmail.com
+                  </div>
+                </div>
+              </div>
+              <div
+                id="frame397"
+                className="absolute left-[173px] top-[18px] w-[14px] h-[14px] item-center gap-[5.53px] rounded-[210px] "
+              >
+                <IoIosAddCircleOutline className="w-full h-full"></IoIosAddCircleOutline>
+              </div>
+            </div>
           </div>
           <div
-            id="453"
-            className="absolute left-[188px]  top-[0px] w-[85px] h-[25px] gap-[10px] px[12px] py-[4px] items-center  text-[12px]"
-          > Archived(0)</div>
+            id="frame475"
+            className="bg-green-500 absolute left-[239px] justify-start w-[113px] h-[1000px] "
+          >
+            <div
+              id="459"
+              className=" bg-yellow-500 w-[113px] h-[50px] gap-[24px] px-[16px] py-[8px] flex"
+            >
+              <div
+                id="frame456"
+                className="left-[16px] top[16.5px] w-[44px] h-[17px] justify-start gap-[2px] flex"
+              >
+                <div id="text" className="w-[28px] h-[17px] text-[12px]">
+                  Tags
+                </div>
+                <div
+                  id="updown"
+                  className="left-[30px] top-[1.5px] w-[14px] h-[14px]"
+                >
+                  <PiCaretUpDownLight className="w-[5.83px] h-[9.33px]"></PiCaretUpDownLight>
+                </div>
+              </div>
+              <div
+                id="vertdos"
+                className="left-[84px] top-[18.5px] w-[13px] h-[13px]"
+              >
+                <div id="Icon" className="left-[5.96] top-[2.17] w-[1.08px] h-[8.67px]"></div>
+                <HiDotsVertical ></HiDotsVertical>
+              </div>
+            </div>
+            <div id="489" className="bg-purple-500 top-[50px] w-[113px] h-[50px] justify-start px-[16px] py-[8px]">
+              <div id="textinside" className=" left-[16px] top[16.5px] w-[6px] h-[17px] text-[12px]">-</div>
+            </div>
+
+          </div>
+<div id="476" className="bg-white absolute left-[352px] justify-start w-[143px] h-[1000px] ">
+  <div id="frame460"  className=" bg-pink-500 w-[143px] h-[50px] gap-[24px] px-[16px] py-[8px]   justify-start flex">
+    <div id="frame456"></div>
+  </div>
+  
+</div>
+
         </div>
       </div>
 
@@ -191,7 +402,6 @@ const Datatable: React.FC = () => {
           >
             New Client
           </button>
-
 
           {hiddenColumns.length > 0 ? (
             <select
