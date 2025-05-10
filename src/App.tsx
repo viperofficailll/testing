@@ -7,11 +7,10 @@ import Topbar from "./components/Topbar";
 // Optionally, define types for props if needed
 const App = () => {
   return (
-    <div className="app-container bg-[#EDEDF3] left-[2610px] top-[1244px] w-[1440px] h-[1080px] ">
+    <div className="app-container bg-[#EDEDF3] left-[2610px] top-[1244px] w-[1440px] h-[1080px]  ">
       <Topbar />
-      <div className="display-flex">
+      <div className="flex ">
         <Sidebar>
-          {" "}
           <Maincontent />
         </Sidebar>
         

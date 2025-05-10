@@ -3,6 +3,7 @@ import { HiDotsVertical } from "react-icons/hi";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { PiCaretUpDownLight } from "react-icons/pi";
 import type { KeyboardEvent } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 import tweetimage from "../images/tweet.jpg"; // Default image for testing
 
@@ -235,8 +236,10 @@ const Datatable: React.FC = () => {
             </button>
             <div
               id="cheverondown"
-              className="absolute left-[81px] top-[6px]  bg-white w-[20px] h-[20px]"
-            ></div>
+              className="absolute left-[81px] top-[6px]   w-[20px] h-[20px]"
+            >
+              <MdKeyboardArrowDown className="w-full h-full"></MdKeyboardArrowDown>
+            </div>
           </div>
           <div
             id="34079"
@@ -374,22 +377,36 @@ const Datatable: React.FC = () => {
                 id="vertdos"
                 className="left-[84px] top-[18.5px] w-[13px] h-[13px]"
               >
-                <div id="Icon" className="left-[5.96] top-[2.17] w-[1.08px] h-[8.67px]"></div>
-                <HiDotsVertical ></HiDotsVertical>
+                <div
+                  id="Icon"
+                  className="left-[5.96] top-[2.17] w-[1.08px] h-[8.67px]"
+                ></div>
+                <HiDotsVertical></HiDotsVertical>
               </div>
             </div>
-            <div id="489" className="bg-purple-500 top-[50px] w-[113px] h-[50px] justify-start px-[16px] py-[8px]">
-              <div id="textinside" className=" left-[16px] top[16.5px] w-[6px] h-[17px] text-[12px]">-</div>
+            <div
+              id="489"
+              className="bg-purple-500 top-[50px] w-[113px] h-[50px] justify-start px-[16px] py-[8px]"
+            >
+              <div
+                id="textinside"
+                className=" left-[16px] top[16.5px] w-[6px] h-[17px] text-[12px]"
+              >
+                -
+              </div>
             </div>
-
           </div>
-<div id="476" className="bg-white absolute left-[352px] justify-start w-[143px] h-[1000px] ">
-  <div id="frame460"  className=" bg-pink-500 w-[143px] h-[50px] gap-[24px] px-[16px] py-[8px]   justify-start flex">
-    <div id="frame456"></div>
-  </div>
-  
-</div>
-
+          <div
+            id="476"
+            className="bg-white absolute left-[352px] justify-start w-[143px] h-[1000px] "
+          >
+            <div
+              id="frame460"
+              className=" bg-pink-500 w-[143px] h-[50px] gap-[24px] px-[16px] py-[8px]   justify-start flex"
+            >
+              <div id="frame456"></div>
+            </div>
+          </div>
         </div>
       </div>
 
